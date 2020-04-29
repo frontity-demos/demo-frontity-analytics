@@ -40,9 +40,7 @@ const marsTheme = {
         state.theme.isMobileMenuOpen = false;
       },
       afterCSR: ({ state }) => {
-        console.log("Hello");
         observe(() => {
-          console.log(state.router.link);
           ReactGA.pageview(state.router.link);
         })
       },
